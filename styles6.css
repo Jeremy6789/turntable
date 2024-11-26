@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-image: url('./背景.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    color: #333;
+    height: 150px;
+}
+
+header h1 {
+    font-size: 50px;
+    color: #1a0a40;
+    font-weight: 800;
+}
+
+nav {
+    background-color: #4b6769;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    color: rgb(255, 237, 147);
+}
+
+
+body {
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 40px;
+}
+
+.lottery-container {
+    display: flex;
+    gap: 20px;
+}
+
+.wheel-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.input-section {
+    text-align: left;
+    max-width: 400px;
+}
+
+.input-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#name-list {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    resize: none;
+    font-size: 16px;
+    background-color: #fafafa;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.import-button {
+    padding: 8px 12px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.import-button:hover {
+    background-color: #005f7a;
+}
+
+#name-count {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+/* 指針樣式 */
+/* 設置指針的樣式 */
+.pointer {
+    position: absolute;
+    top: 200px;  /* 保持指針的位置不變 */
+    left: 40.5%;   /* 保持指針的水平位置設置為畫布中心 */
+    transform: translateX(-50%);  /* 使指針居中對齊 */
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;   /* 左邊透明，稍微增大底邊 */
+    border-right: 15px solid transparent;  /* 右邊透明，稍微增大底邊 */
+    border-top: 30px solid #008cba;        /* 藍色倒三角形指針，稍微增大高度 */
+    z-index: 10;  /* 確保指針位於轉盤的上方 */
+}
+
+
+
+/* 轉盤樣式 */
+#wheelCanvas {
+    position: relative;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    z-index: 1;  /* 確保轉盤在指針下方 */
+}
+
+/* 旋轉按鈕樣式 */
+.spin-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.spin-button:hover {
+    background-color: #45a049;
+}
+
